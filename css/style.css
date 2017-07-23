@@ -12,7 +12,8 @@ ul{list-style:none;padding:0;margin:0;}
  background-image:linear-gradient(left, #d31b59 42%, #962577 88%);
  background-image:-o-linear-gradient(left, #d31b59 42%, #962577 88%);
  background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(42%,#d31b59), color-stop(88%,#962577))z-index:199;}
-
+.logo{height:99px;}
+.logo img{width:100%;}
 .body-area{background-color:#f1f1f1;width:100%;}
 .content-area{padding-left:10px; padding-right:10px;}
 .content-area>.row{margin-left:-10px; margin-right:-10px}
@@ -60,15 +61,14 @@ ul{list-style:none;padding:0;margin:0;}
 @media (max-width:414px){
 	.card-block-left{width:75%;}
 	.search-field input[type=text]{width:40%;}
-
+	.logo{height:50px;}
 }
 
 @media (max-width:1024px){
 	.card-block-left {
 		width: 42%;
-		padding: 0 10px 0 9px;
+		padding: 0 10px 0 10px;
 	}
-	.card-block-left{width:75%;}
 	.card-block-right {
     	padding-left: 10px;
 	}
