@@ -14,7 +14,7 @@ app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
 
 
-app.get('/*', function(req, res) {
+app.all('*', function(req, res) {
    console.log('All');
     res
         .status(200)
