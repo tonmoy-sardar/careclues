@@ -11,7 +11,7 @@
                                 <div class="search-field-holder">
                                     <div  class="search-field">
                                         <input type="text" class="autocomplete" placeholder="Search patient by name or phone number" ng-model="searchPatient" typeahead="patient.patientInfo for patient in patients | filter:$viewValue | limitTo:10" ><span>Or</span>
-                                        <button type="button" class="add-patient">Add patient</button>
+                                        <button type="button" class="add-patient"  ng-click="pendingWork();">Add patient</button>
                                     </div>
                                 </div>	
                             </div>
@@ -36,38 +36,38 @@
                                 <div class="prfl-pic"><img src="http://{{patient.picture}}"></div>
                                 <div>
                                     <div class="card-block-left">
-                                        <h4 class="doctor-name" ng-click="openDoctorStatusPopup(patient);" >{{patient.name.first}} {{patient.name.last}}</h4>
+                                        <h4 class="doctor-name" ng-click="openPatientInfoPopup(patient);" >{{patient.name.first}} {{patient.name.last}}</h4>
                                         <p>{{patient.age}}</p>
                                         <p>{{patient.phone}}</p>
                                     </div>
                                     <div class="card-block-middle">
                                         <ul>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="openDoctorStatusPopup(patient);"><i class="left-icon profile-icon"></i></a>											
+                                                <a href="javascript:void(0)" ng-click="openPatientInfoPopup(patient);"><i class="left-icon profile-icon"></i></a>											
                                              </li>
                                              <li>
-                                             	<a href="#"><i class="left-icon report-icon"></i></a>
+                                             	<a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon report-icon"></i></a>
                                              </li>
                                              <li>
-                                                <a href="#"><i class="left-icon document-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon document-icon"></i></a>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="left-icon sms-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon sms-icon"></i></a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="left-icon mail-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon mail-icon"></i></a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="left-icon mobile-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon mobile-icon"></i></a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="card-block-right">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="left-icon calendar-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon calendar-icon"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -89,12 +89,12 @@
                     <div>
                         <div class="form-group">
                         	<div class="prfl-pic"><img src="http://{{patientPicture}}"></div>
-                            <div style="float:left;">
+                            <div style="float:left; padding-left:20px; margin-top:-10px;">
                             	<div>
-                            		<label>Name</label> {{patientFirstName}} {{patientLastName}}
+                            		<label>Name :</label> {{patientFirstName}} {{patientLastName}}
                                 </div>
                                 <div>
-                            		<label>Age</label> {{patientAge}}
+                            		<label>Age :</label> {{patientAge}}
                                 </div>
                             </div>
                             <br clear="all"/>

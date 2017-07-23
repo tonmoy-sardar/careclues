@@ -63,7 +63,7 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
 			$scope.dataLimit = $scope.dataLimit + 20;
 	};
 		
-	$scope.openDoctorStatusPopup = function(patient)
+	$scope.openPatientInfoPopup = function(patient)
 	{
 		$scope.patientPicture = patient.picture;
 		$scope.patientFirstName = patient.name.first;
@@ -72,5 +72,10 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
 		
 		$('#patient-popup').fadeIn();
 	};
+	
+	$scope.pendingWork = function() {
+            // Function code
+           commonServices.open('We are Coming Soon with this Functionality');
+    };
 });
 
