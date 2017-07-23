@@ -3,9 +3,6 @@ var winston = require('winston');
 var fs = require('fs');
 
 
-logger.info('log to file');
-
-
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
