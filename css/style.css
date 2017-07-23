@@ -13,6 +13,7 @@ ul{list-style:none;padding:0;margin:0;}
  background-image:-o-linear-gradient(left, #d31b59 42%, #962577 88%);
  background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(42%,#d31b59), color-stop(88%,#962577))z-index:199;}
 .logo{height:99px;}
+.logo img{height:99px;}
 .body-area{background-color:#f1f1f1;width:100%;}
 .content-area{padding-left:10px; padding-right:10px;}
 .content-area>.row{margin-left:-10px; margin-right:-10px}
@@ -61,6 +62,7 @@ ul{list-style:none;padding:0;margin:0;}
 	.card-block-left{width:75%;}
 	.search-field input[type=text]{width:40%;}
 	.logo{height:50px;}
+	.logo img{height:50px;}
 }
 
 @media (max-width:1024px){
