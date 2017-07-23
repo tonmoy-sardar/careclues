@@ -49,8 +49,8 @@ ul{list-style:none;padding:0;margin:0;}
 .popup-container{background-color:#fff;border-radius:3px;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;margin:0 auto;overflow:auto;max-height:100%;min-height:200px;}
 
 .btn-letter{background-color:transparent; border:0px solid #F00; font-size:16px;  padding:3px 10px; }
-.btn-letter:hover{background-color:#F00; border:0px solid #F00; border-radius:3px;}
-.btn-letter .active{background-color:#F00; border:0px solid #F00; border-radius:3px;}
+.btn-letter:hover{background-color:#F00; border:0px solid #F00; border-radius:3px; color:#FFF}
+.btn-letter .active{background-color:#F00; border:0px solid #F00; border-radius:3px;color:#FFF}
 
 .search-field input[type=text]{width:50%; border:1px solid #F00; border-radius:3px; padding:10px 5px;}
 
