@@ -50,7 +50,7 @@ ul{list-style:none;padding:0;margin:0;}
 
 .btn-letter{background-color:transparent; border:0px solid #F00; font-size:16px;  padding:3px 10px; }
 .btn-letter:hover{background-color:#F00; border:0px solid #F00; border-radius:3px; color:#FFF}
-.btn-letter .active{background-color:#F00; border:0px solid #F00; border-radius:3px;color:#FFF}
+.active{background-color:#F00; border:0px solid #F00; border-radius:3px;color:#FFF}
 
 .search-field input[type=text]{width:50%; border:1px solid #F00; border-radius:3px; padding:10px 5px;}
 
