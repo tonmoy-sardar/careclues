@@ -8,12 +8,10 @@
                     <div class="col-xs-12 col-sm-12">
                         <form>
                             <div class="search-section">
-                                <div class="search-field-holder">
-                                    <div  class="search-field">
-                                        <input type="text" class="autocomplete" placeholder="Search patient by name or phone number" ng-model="searchPatient" typeahead="patient.patientInfo for patient in patients | filter:$viewValue | limitTo:10" ><span>Or</span>
-                                        <button type="button" class="add-patient"  ng-click="pendingWork();">Add patient</button>
-                                    </div>
-                                </div>	
+                                <div  class="search-field">
+                                    <input type="text" class="autocomplete" placeholder="Search patient by name or phone number" ng-model="searchPatient" typeahead="patient.patientInfo for patient in patients | filter:$viewValue | limitTo:10" ><span>Or</span>
+                                    <button type="button" class="btn-add-patient"  ng-click="pendingWork();">Add patient</button>
+                                </div>
                             </div>
                          </form>
                     </div>
@@ -22,8 +20,8 @@
                     <div class="col-xs-12 col-sm-12">
                         <div class="search-section">
                             <div class="btn-group btn-group-sm">
-                                <button class="btn red-border-btn"  ng-repeat="letter in alphabet" ng-click="activateLetter(letter)" ng-class="{'active':letter==activeLetter}">{{letter}}</button>
-                                <button class="btn red-border-btn" ng-click="activateLetter('')" ng-class="{'active':activeLetter==''}">All</button>
+                                <button class="btn-letter"  ng-repeat="letter in alphabet" ng-click="activateLetter(letter)" ng-class="{'active':letter==activeLetter}">{{letter}}</button>
+                                <button class="btn-letter" ng-click="activateLetter('')" ng-class="{'active':activeLetter==''}">All</button>
                             </div>
                         </div>
                     </div>
@@ -43,31 +41,31 @@
                                     <div class="card-block-middle">
                                         <ul>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="openPatientInfoPopup(patient);"><i class="left-icon profile-icon"></i></a>											
+                                                <a href="javascript:void(0)" ng-click="openPatientInfoPopup(patient);"><i class="card-icon profile-icon"></i></a>											
                                              </li>
                                              <li>
-                                             	<a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon report-icon"></i></a>
+                                             	<a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon report-icon"></i></a>
                                              </li>
                                              <li>
-                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon document-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon document-icon"></i></a>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon sms-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon sms-icon"></i></a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon mail-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon mail-icon"></i></a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon mobile-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon mobile-icon"></i></a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="card-block-right">
                                         <ul>
                                             <li>
-                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="left-icon calendar-icon"></i></a>
+                                                <a href="javascript:void(0)" ng-click="pendingWork();"><i class="card-icon calendar-icon"></i></a>
                                             </li>
                                         </ul>
                                     </div>
