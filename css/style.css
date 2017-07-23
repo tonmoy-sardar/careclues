@@ -25,7 +25,7 @@ ul{list-style:none;padding:0;margin:0;}
 
 .card-block-left{width:40%; margin-top:-10px; padding: 0 10px 0 20px; float:left;}
 .card-block-middle{float:left;margin-top:-10px;}
-.card-block-right{float:left;margin-top:-10px; padding-left:40px}
+.card-block-right{float:left;margin-top:-10px; padding-left:30px}
 
 .card-block-middle ul li {float:left; padding:5px 15px 5px 0;}
 .card-block-right ul li {float:left; padding:30px 15px 5px 0;}
@@ -60,5 +60,19 @@ ul{list-style:none;padding:0;margin:0;}
 @media (max-width:414px){
 	.card-block-left{width:75%;}
 	.search-field input[type=text]{width:40%;}
+
+}
+
+@media (max-width:1024px){
+	.card-block-left {
+		width: 42%;
+		padding: 0 10px 0 9px;
+	}
+	.card-block-left{width:75%;}
+	.card-block-right {
+    	padding-left: 10px;
+	}
+	.card-block-middle ul li {float:left; padding:5px 5px 5px 0;}
+	.card-block-right ul li {float:left; padding:30px 5px 5px 0;}
 
 }
