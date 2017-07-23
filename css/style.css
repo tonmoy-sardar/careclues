@@ -57,7 +57,7 @@ ul{list-style:none;padding:0;margin:0;}
 .btn-add-patient{background-color:#F00; border:1px solid #F00; border-radius:5px; padding:10px 10px; color:#FFF;text-transform:uppercase;}
 .search-field span{padding:5px 20px;}
 
-@media (min-width:360px){
+@media (max-width:360px){
 	.card-block-left{width:75%;}
 	.search-field input[type=text]{width:40%;}
 
