@@ -1,5 +1,5 @@
-var appModule = angular.module('carecluesApp',['ui.bootstrap', 'ngRoute','ngAside','ngAnimate', 'ngTouch', 'uiSwitch','infinite-scroll']);
-
+//var appModule = angular.module('carecluesApp',['ui.bootstrap', 'ngRoute','ngAside','ngAnimate', 'ngTouch', 'uiSwitch','infinite-scroll']);
+var appModule = angular.module('carecluesApp',['ui.bootstrap', 'ngRoute','infinite-scroll']);
 appModule.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider, httpMethodInterceptorProvider){
 	
 	$locationProvider.html5Mode(true);

@@ -20,7 +20,7 @@ appModule.filter('startsWithLetter', function()
 	};
 });
 
-angular.module('carecluesApp').controller('PatientListController', function($scope, $route, $http, $window, $aside, $location,PageTitle,MetaInformation,commonServices) {
+angular.module('carecluesApp').controller('PatientListController', function($scope, $route, $http, PageTitle,MetaInformation,commonServices) {
 	
 	$scope.init = function() 
 	{
@@ -28,7 +28,7 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
 			$('#patient-popup').fadeOut();
 		});
 		PageTitle.setTitle('Find Patient from Careclues');
-		MetaInformation.setMetaDescription('Find doctors in your area, view their profiles, phone number or driving directions and schedule appointments.');
+		MetaInformation.setMetaDescription('Find Patient from Careclues');
 		
 		var str = "abcdefghijklmnopqrstuvwxyz";
 		$scope.alphabet = str.toUpperCase().split("");
