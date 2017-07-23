@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * Custom Filter
+ */
 appModule.filter('startsWithLetter', function() 
 {
 	return function(items, letter) 
@@ -20,13 +23,23 @@ appModule.filter('startsWithLetter', function()
 	};
 });
 
-angular.module('carecluesApp').controller('PatientListController', function($scope, $route, $http, PageTitle,MetaInformation,commonServices) {
+angular.module('carecluesApp').controller('PatientListController', function($scope, $route, $http, PageTitle,MetaInformation,commonServices) 
+{
+	/**
+	 * User controller functions
+	 */
+	 
+	/**
+	 * @function init
+	 */
 	
 	$scope.init = function() 
 	{
 		$('.popup-close-btn').on('click',function(){
 			$('#patient-popup').fadeOut();
 		});
+		
+		
 		PageTitle.setTitle('Find Patient from Careclues');
 		MetaInformation.setMetaDescription('Find Patient from Careclues');
 		
@@ -36,8 +49,8 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
   		$scope.activeLetter = 'A'; 
 		$scope.dataLimit = 20;
 		
-		$http.get('resource/patients.json').success(function (data) {
-			  
+		$http.get('resource/patients.json').success(function (data) 
+		{
 			for(var i=0; i<data.length; i++)
 			{
 				data[i].patientInfo = data[i].name.first +" "+ data[i].name.last +"("+ data[i].age + ")"  ;
@@ -47,22 +60,29 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
 		
 	};
 	
+	 
+	/**
+	 * @function activateLetter
+	 * @parameter letter
+	 */
 	$scope.activateLetter = function(letter)
 	{
 		$scope.dataLimit = 20;
 		$scope.activeLetter = letter;
 	};
 
-	$scope.goTo = function(page) {
-		$location.url(page);
-	};
-	
-	
+	/**
+	 * @function NextPage
+	 */
 	$scope.NextPage = function () 
 	{
 			$scope.dataLimit = $scope.dataLimit + 20;
 	};
-		
+	
+	/**
+	 * @function openPatientInfoPopup
+	 * @parameter patient
+	 */
 	$scope.openPatientInfoPopup = function(patient)
 	{
 		$scope.patientPicture = patient.picture;
@@ -73,8 +93,11 @@ angular.module('carecluesApp').controller('PatientListController', function($sco
 		$('#patient-popup').fadeIn();
 	};
 	
-	$scope.pendingWork = function() {
-            // Function code
+	/**
+	 * @function pendingWork
+	 */
+	$scope.pendingWork = function() 
+	{
            commonServices.open('We are Coming Soon with this Functionality');
     };
 });
